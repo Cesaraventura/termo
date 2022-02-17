@@ -22,6 +22,16 @@ def input_guess(prompt):
     elif len(chute) != 5: return chute[0:5]  #envia as 5 primeiras letras
     else: return chute.lower()
 
-
-
+def check_guess(chute, resposta, y):
+    count = 0
+    x = -250        #localização do x
+    for i in chute:
+        if i == resposta[count]: draw_square(x, y, "green")     #letra certa desenha um quadrado verde
+        elif i in resposta: draw_square(x, y, "yellow")
+        else: draw_square(x, y, "red")
+        count += 1
+        x += 75     #move a coordenada 75
+    turtle.penup()
+    turtle.goto(x, y - 25)
+    turtle.write(chute, font=("Verdana", 15, "normal"))
 
