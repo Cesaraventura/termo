@@ -1,9 +1,9 @@
 import turtle, random
 lista_de_palavras = ['sagaz', 'negro', 'amago', 'exito', 'mexer', 'termo', 'senso', 'nobre', 'algoz', 'afeto',
                      'plena', 'etica', 'mutua', 'sutil', 'tenue', 'vigor', 'aquem', 'audaz', 'porem', 'fazer']
-reposta = random.choice(lista_de_palavras) #para escolher uma palavra da lista acima
+resposta = random.choice(lista_de_palavras) #para escolher uma palavra da lista acima
 y = 250
-print(reposta)
+print(resposta)
 
 def draw_square(x, y, cor):   #cordenadas x e y e cores
     turtle.penup()
@@ -35,3 +35,18 @@ def check_guess(chute, resposta, y):
     turtle.goto(x, y - 25)
     turtle.write(chute, font=("Verdana", 15, "normal"))
 
+for i in range(6):      #onde o programa começa
+    chute_prompt = 'Qual seu chute?'
+    chute = input_guess(chute_prompt)
+    check_guess(chute, resposta, y)
+    y -= 75
+    if chute == resposta:
+        turtle.penup()
+        turtle.goto(-400, -300)
+        turtle.write("PARABÉNS, VOCE ACERTOU!!", font=("Verdana", 42, "normal"))
+        break
+else:
+    turtle.penup()
+    turtle.goto(-400, -300)
+    turtle.write(resposta, font=("Verdana", 42, "normal"))
+turtle.done()
