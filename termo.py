@@ -22,7 +22,7 @@ lista_de_palavras = ['sagaz', 'negro', 'amago', 'exito', 'mexer', 'termo', 'sens
                      'levar', 'tesao', 'burro', 'selar', 'fator', 'festa', 'sexta', 'judeu', 'monge', 'rumor',
                      'piada', 'roupa', 'chefe', 'nuvem', 'ambar', 'bença', 'clero', 'amiga', 'demao', 'natal',
                      'nessa', 'sigla', 'firma', 'rente', 'enjoo', 'zumbi', 'ousar', 'santo', 'lutar', 'baixo',
-                     'coroa', 'forro', 'macho', 'farto', 'ultra', 'lento', 'harem']
+                     'coroa', 'forro', 'macho', 'farto', 'ultra', 'lento', 'harem', 'caixa', 'russo']
 resposta = random.choice(lista_de_palavras) #para escolher uma palavra da lista acima
 y = 250
 print(resposta)
@@ -71,10 +71,10 @@ for i in range(6):      #onde o programa começa
     if chute == resposta:
         turtle.penup()
         turtle.goto(-400, -300)
-        turtle.write("PARABÉNS, VOCE ACERTOU!!", font=("Verdana", 42, "normal"))
+        turtle.write("PARABÉNS, VOCE ACERTOU!!", font=("Verdana", 41, "normal"))
         break
 else:
     turtle.penup()
     turtle.goto(-400, -300)
-    turtle.write(resposta, font=("Verdana", 42, "normal"))
+    turtle.write(resposta, font=("Verdana", 41, "normal"))
 turtle.done()
