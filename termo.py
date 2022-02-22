@@ -61,7 +61,7 @@ def check_guess(chute, resposta, y):
         x += 75     #move a coordenada 75
     turtle.penup()      #penup desativa a caneta
     turtle.goto(x, y - 25)
-    turtle.write(chute, font=("Verdana", 15, "normal"))
+    turtle.write(chute, font=("Verdana", 16, "normal"))
 
 for i in range(6):      #onde o programa começa
     chute_prompt = 'Qual seu chute?'
@@ -71,10 +71,10 @@ for i in range(6):      #onde o programa começa
     if chute == resposta:
         turtle.penup()
         turtle.goto(-400, -300)
-        turtle.write("PARABÉNS, VOCE ACERTOU!!", font=("Verdana", 41, "normal"))
+        turtle.write("PARABÉNS, VOCE ACERTOU!!", font=("Verdana", 42, "normal"))
         break
 else:
     turtle.penup()
     turtle.goto(-400, -300)
-    turtle.write(resposta, font=("Verdana", 41, "normal"))
+    turtle.write(resposta, font=("Verdana", 42, "normal"))
 turtle.done()
